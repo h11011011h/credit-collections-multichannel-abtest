@@ -1,0 +1,13 @@
+experiment:
+  name: "collections_direct_mail_ab_test"
+  alpha: 0.05
+  power: 0.80
+  mde_cure_rate: 0.02
+
+outreach_costs:
+  control_cost_per_acct: 1.20    # Digital only (SMS/Dialer/Email)
+  treatment_cost_per_acct: 1.95  # Digital + Direct Mail ($0.75 mailer cost)
+
+segmentation:
+  balance_cutoffs: [0, 1000, 3000]
+  balance_labels: ["Low (<$1k)", "Medium ($1k-$3k)", "High (>$3k)"]
